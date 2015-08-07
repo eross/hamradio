@@ -1,0 +1,6 @@
+#!/bin/bash
+cd "$(dirname "$BASH_SOURCE")"
+curl http://naqcc.info/naqcc.zip > naqcc.zip
+unzip naqcc.zip
+tr -s ' ' ',' < NAQCC.dat > NAQCC.csv
+rm NAQCC.dat ReadMe.txt naqcc.zip
